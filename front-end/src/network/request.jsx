@@ -41,14 +41,17 @@ export const createList = async (list) => {
     return { data: request.json(), status: request.status }
 }
 
-export const createCard = async (card) => {
+export const createCard = async ({ title, owner }) => {
     const header = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ title: card })
+        body: JSON.stringify({ title, owner })
     }
+
     const request = await fetch(`${apiServerUrl}/api/cards`, header);
+    console.log(request.status);
+
     return { data: request.json(), status: request.status }
 }

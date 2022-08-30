@@ -7,15 +7,17 @@ import { createCard } from '../../../../network/request';
 
 export const InputCard = ({ setOpen, listId }) => {
     const { addMoreCard } = useContext(storeApi)
-    const [cardTitle, setCardTitle] = useState('')
+    const [cardTitle, setCardTitle] = useState('');
 
     const handleOnChange = (e) => {
-        setCardTitle(e.target.value)
+        setCardTitle(e.target.value);
     }
 
     const handleBtnConfirm = () => {
         (async () => {
-            const { status } = await createCard(cardTitle)
+            console.log(listId)
+            console.log(cardTitle)
+            const { status } = await createCard({ title: cardTitle, owner: listId });
             if (status === 200) {
                 console.log('created')
             } else {

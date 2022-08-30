@@ -2,6 +2,16 @@ const express = require("express");
 const router = express.Router();
 const List = require("../models/List");
 
+// Get request method (read) -> Read All Cards from a List.
+// router.get("/:title", async (req, res) => {
+//     try {
+//         let foundList = await List.find({ title: req.params.title }).populate("cards");
+//         res.json(foundList);
+//     } catch (err) {
+//         res.json({ message: err });
+//     }
+// });
+
 // Get request method (read)
 router.get("/", async (req, res) => {
     try {
@@ -15,7 +25,7 @@ router.get("/", async (req, res) => {
 // Get request method by id (read by id)
 router.get("/:listId", async (req, res) => {
     try {
-        const list = await List.findById(req.params.listId);
+        const list = await List.findById(req.params.listId).populate('cards');
         res.json(list);
     } catch (err) {
         res.json({ message: err });

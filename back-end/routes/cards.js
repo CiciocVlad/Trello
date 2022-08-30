@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const Card = require('../models/Card');
+const List = require('../models/List');
 
 // Get request method (read)
 router.get('/', async (req, res) => {
     try {
-        const cards = await Card.find();
+        const cards = await Card.find().populate('owner');
         res.json(cards);
     } catch (err) {
         res.json({ message: err });
@@ -25,12 +26,17 @@ router.get('/:cardId', async (req, res) => {
 // Post request method (create)
 router.post('/', async (req, res) => {
     const card = new Card({
-        title: req.body.title
-        // list: req.body.list,
+        title: req.body.title,
+        owner: req.body.owner
     });
+    // console.log(req.body.owner);
+    // const list = await List.findById(req.body.owner);
+
+    // list.cards.push(card);
 
     try {
         const savedCard = await card.save();
+        // list.save();
         res.json(savedCard);
     }
     catch (err) {
