@@ -31,6 +31,7 @@ router.get("/:listId", async (req, res) => {
         res.json({ message: err });
     }
 });
+//fieldul de cards din frontend in useeffect cand afisez listele afisez si cardurile ca am ids si cardurile
 
 // Post request method (create)
 router.post("/", async (req, res) => {
