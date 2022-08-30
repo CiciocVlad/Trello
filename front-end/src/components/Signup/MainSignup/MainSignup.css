@@ -108,7 +108,7 @@ label {
 /* NEW CSS */
 /* NEW CSS */
 
-.FormControl>.MdVerifiedUserFlexBox {
+.FormControl > .MdVerifiedUserFlexBox {
   color: green;
   font-size: 20px;
   visibility: hidden;
@@ -117,7 +117,7 @@ label {
   margin-top: 25%;
 }
 
-.FormControl>.MdVerifiedUser {
+.FormControl > .MdVerifiedUser {
   color: green;
   font-size: 20px;
   visibility: hidden;
@@ -126,7 +126,7 @@ label {
   margin-top: 12.5%;
 }
 
-.FormControl>.BsPatchExclamationFillFlexBox {
+.FormControl > .BsPatchExclamationFillFlexBox {
   color: red;
   font-size: 20px;
   visibility: hidden;
@@ -135,7 +135,7 @@ label {
   margin-top: 25%;
 }
 
-.FormControl>.BsPatchExclamationFill {
+.FormControl > .BsPatchExclamationFill {
   color: red;
   font-size: 20px;
   visibility: hidden;
@@ -144,27 +144,27 @@ label {
   margin-top: 12.5%;
 }
 
-.FormControl.success>small {
+.FormControl.success > small {
   visibility: hidden;
 }
 
-.FormControl.success>.MdVerifiedUserFlexBox {
+.FormControl.success > .MdVerifiedUserFlexBox {
   visibility: visible;
 }
 
-.FormControl.success>.MdVerifiedUser {
+.FormControl.success > .MdVerifiedUser {
   visibility: visible;
 }
 
-.FormControl.error>.BsPatchExclamationFillFlexBox {
+.FormControl.error > .BsPatchExclamationFillFlexBox {
   visibility: visible;
 }
 
-.FormControl.error>.BsPatchExclamationFill {
+.FormControl.error > .BsPatchExclamationFill {
   visibility: visible;
 }
 
-.FormControl>small {
+.FormControl > small {
   position: absolute;
   bottom: -20%;
   left: 1%;
