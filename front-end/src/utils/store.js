@@ -14,15 +14,15 @@
 // ];
 
 const data = {
-    lists: {
-        // 'list-1': {
-        //     id: 'list-1',
-        //     title: 'Todo',
-        //     cards,
-        // },
-    },
-    //'list-1'
-    listIds: [],
-};
+  lists: {
+    // 'list-1': {
+    //     id: 'list-1',
+    //     title: 'Todo',
+    //     cards,
+    // },
+  },
+  //'list-1'
+  listIds: []
+}
 
-export default data;
+export default data
